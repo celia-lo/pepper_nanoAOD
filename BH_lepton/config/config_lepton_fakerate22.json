@@ -1,0 +1,476 @@
+{
+
+    "year": "ul2018",
+    "datadir": "/afs/cern.ch/work/y/ylo/pepper_nanoAOD/2018",
+    "store": "/eos/cms/store",
+    "file_mode": "local+xrootd",
+    "xrootddomain": "xrootd-cms.infn.it",
+    "rng_seed_file": "$CONFDIR/seed.txt",
+    "compute_systematics": false,
+    "only_nonprompt_syst": true,
+    "top_pt_reweighting": {
+        "method": "datanlo",
+        "scale": 0.997175,
+        "a": 0.0615,
+        "b": -0.0005
+    },
+    "lumimask": "$CONFDIR/Cert_Collisions2022_355100_362760_Golden.json",
+    //"ML_model": "$DATADIR/ML/",
+    "luminosity": 7.98,
+    "split_pdf_uncs":false,
+    "crosssections": "$CONFDIR/crosssections.json",
+    "data_pu_hist": "$DATADIR/PU/my2018PUHist_nominal.root",
+    "data_pu_hist_up": "$DATADIR/PU/my2018PUHist_up.root",
+    "data_pu_hist_down": "$DATADIR/PU/my2018PUHist_down.root",
+    "pileup_reweighting": "$DATADIR/PU/pileup.root",
+    "jetvetomap": "$DATADIR/JetVetoMaps",
+    "pdf_types": {
+    "91400": "Hessian",
+    "325300": "Hessian",
+    "325500": "Hessian",
+    "306000": "Hessian"
+    },
+    "muon_rochester": "$DATADIR/roccor/RoccoR2018UL.txt",
+    "electron_sf": [
+        [
+          "$DATADIR/electron_sf/egammaEffi.txt_Ele_Medium_EGM2D_UL2018.root",
+          "EGamma_SF2D",
+          ["eta", "pt"]
+        ],
+        [
+          "$DATADIR/electron_sf/egammaEffi_ptAbove20.txt_EGM2D_UL2018.root",
+          "EGamma_SF2D",
+          ["eta", "pt"]
+        ],
+        [
+          "$DATADIR/trigger_sf/egammaEffi.txt_EGM2D.root",
+          "EGamma_SF2D",
+          ["eta", "pt"]
+        ]
+    ],
+    "muon_sf": [
+        [
+          "$DATADIR/muon_sf/Efficiencies_muon_generalTracks_Z_Run2018_UL_ID.root",
+          "NUM_TightID_DEN_TrackerMuons_abseta_pt",
+          ["abseta","pt"]
+        ],
+        [
+          "$DATADIR/muon_sf/Efficiencies_muon_generalTracks_Z_Run2018_UL_ISO.root", 
+          "NUM_TightRelIso_DEN_TightIDandIPCut_abseta_pt",
+          ["abseta","pt"]
+        ],
+        [
+          "$DATADIR/muon_sf/Efficiencies_muon_generalTracks_Run2018_UL_trackerMuon.root", 
+          "NUM_TrackerMuons_DEN_genTracks",
+          ["abseta","pt"]
+        ],
+        [
+          "$DATADIR/trigger_sf/NUM_IsoMu24_DEN_CutBasedIdTight_and_PFIsoTight18.root", 
+          "NUM_IsoMu24_DEN_CutBasedIdTight_and_PFIsoTight_abseta_pt",
+          ["abseta","pt"]
+        ]
+    ],
+    "photon_sf": [
+        [
+        "$DATADIR/photon_sf/egammaEffi.txt_EGM2D_Pho_Med_UL18.root",
+        "EGamma_SF2D",
+        ["eta", "pt"]
+        ]
+    ],
+    "psv_sf": [
+        [
+        "$DATADIR/photon_sf/HasPix_SummaryPlot_UL18.root",
+        "MediumID/SF_HasPix_MediumID"
+        ]
+    ],
+    "jet_puid_sf":[
+        [
+          "$DATADIR/jet_puid/PUID_106XTraining_ULRun2_EffSFandUncties_v1.root",
+          "h2_eff_mcUL2018_L",
+          ["pt","eta"]
+        ],
+        [
+          "$DATADIR/jet_puid/PUID_106XTraining_ULRun2_EffSFandUncties_v1.root",
+          "h2_eff_sfUL2018_L",
+          ["pt","eta"]
+        ],
+    ],
+    "jet_puid_sf_unc":[
+        [
+          "$DATADIR/jet_puid/PUID_106XTraining_ULRun2_EffSFandUncties_v1.root",
+          "h2_eff_sfUL2018_L_Systuncty",
+          ["pt","eta"]
+        ]
+    ],
+    "nonprompt_leptonsf_all": [
+        "$DATADIR/nonprompt_lepton/nonprompt_leptonsf_abseta_pt_18.root",
+        ["ele_rate","muon_rate"]
+    ],
+    "nonprompt_photon_sf": [
+        "$DATADIR/nonprompt_photon/nonprompt_photon_rate_18.root",
+        ["ele_rate","muon_rate"]
+    ],
+    "nonprompt_photonsf_all": [
+        "$DATADIR/nonprompt_photon/nonprompt_photonsf_abseta_pt_18.root",
+        ["ele_rate","muon_rate"]
+    ],
+    "nonprompt_photon_sf_ttbar": [
+        "$DATADIR/nonprompt_photon/nonprompt_photon_ttbar_rate_18.root",
+        ["ele_rate","muon_rate"]
+    ],
+    "nonprompt_photonsf_ttbar_all": [
+        "$DATADIR/nonprompt_photon/nonprompt_ttbar_photonsf_abseta_pt_18.root",
+        ["ele_rate","muon_rate"]
+    ],
+    "nonprompt_MCcorrection": [
+        "$DATADIR/nonprompt_photon/nonprompt_Mccorrection_18.root",
+        ["ele_corr_factor","muon_corr_factor"]
+    ],
+    "btag_sf" : [
+        [
+        "$DATADIR/btag/btagging.json",
+        "$DATADIR/btag/deepjet_medium_eff_ul18.root"
+        ]
+    ],
+    "btag": "deepjet:medium",
+    "btag_method": "fixedwp",
+    "btag_measure_type": "comb",
+    "btag_ignoremissing": false,
+    "split_muon_uncertainty": false,
+    "split_btag_year_corr": false,
+    "reapply_jec": false,
+    "jet_correction_mc": [
+        "$DATADIR/JEC/Summer19UL18_V5_MC/Summer19UL18_V5_MC_L1FastJet_AK4PFchs.txt",
+        "$DATADIR/JEC/Summer19UL18_V5_MC/Summer19UL18_V5_MC_L2Relative_AK4PFchs.txt",
+        "$DATADIR/JEC/Summer19UL18_V5_MC/Summer19UL18_V5_MC_L3Absolute_AK4PFchs.txt"
+    ],
+    "jet_uncertainty": "$DATADIR/RegroupedV2_Summer19UL18_V5_MC_UncertaintySources_AK4PFchs.txt",
+    "jet_resolution": "$DATADIR/JER/Summer19UL18_JRV2_MC/Summer19UL18_JRV2_MC_PtResolution_AK4PFchs.txt",
+    "jet_ressf": "$DATADIR/JER/Summer19UL18_JRV2_MC/Summer19UL18_JRV2_MC_SF_AK4PFchs.txt",
+    "smear_met": true,
+    "data_eras": {
+        // "2018A": [315257, 316995],
+        // "2018B": [317080, 319310],
+        // "2018C": [319337, 320065],
+        // "2018D": [320500, 325175]
+        "2022C": [
+            355794,
+            357486
+        ],
+        "2022D": [
+            357487,
+            359021
+        ]
+    },
+    "exp_datasets": {
+        "SingleMuon": [
+        //   "/SingleMuon/Run2018A-UL2018_MiniAODv2_NanoAODv9-v2/NANOAOD",
+        //   "/SingleMuon/Run2018B-UL2018_MiniAODv2_NanoAODv9-v2/NANOAOD",
+        //   "/SingleMuon/Run2018C-UL2018_MiniAODv2_NanoAODv9-v2/NANOAOD",
+        //   "/SingleMuon/Run2018D-UL2018_MiniAODv2_NanoAODv9-v1/NANOAOD"
+          "/SingleMuon/Run2022C-22Sep2023-v1/NANOAOD",
+          "/Muon/Run2022D-22Sep2023-v1/NANOAOD"
+        ],
+        // "EGamma": [
+        //   "/EGamma/Run2018A-UL2018_MiniAODv2_NanoAODv9-v1/NANOAOD",
+        //   "/EGamma/Run2018B-UL2018_MiniAODv2_NanoAODv9-v1/NANOAOD",
+        //   "/EGamma/Run2018C-UL2018_MiniAODv2_NanoAODv9-v1/NANOAOD",
+        //   "/EGamma/Run2018D-UL2018_MiniAODv2_NanoAODv9-v3/NANOAOD"
+        // ]
+
+    },
+    "mc_datasets": {
+    //     "TTToSemiLeptonic_TuneCP5_13TeV-powheg-pythia8": [
+    //         "/TTToSemiLeptonic_TuneCP5_13TeV-powheg-pythia8/RunIISummer20UL18NanoAODv9-106X_upgrade2018_realistic_v16_L1v1-v1/NANOAODSIM"
+    //     ],
+    //     "TTTo2L2Nu_TuneCP5_13TeV-powheg-pythia8": [
+    //         "/TTTo2L2Nu_TuneCP5_13TeV-powheg-pythia8/RunIISummer20UL18NanoAODv9-106X_upgrade2018_realistic_v16_L1v1-v1/NANOAODSIM"
+    //     ],
+	// "WJetsToLNu_TuneCP5_13TeV-amcatnloFXFX-pythia8": [
+    //         "/WJetsToLNu_TuneCP5_13TeV-amcatnloFXFX-pythia8/RunIISummer20UL18NanoAODv9-106X_upgrade2018_realistic_v16_L1v1-v2/NANOAODSIM"
+    //     ],
+    //     "DYJetsToLL_M-10to50_TuneCP5_13TeV-amcatnloFXFX-pythia8": [
+    //         "/DYJetsToLL_M-10to50_TuneCP5_13TeV-amcatnloFXFX-pythia8/RunIISummer20UL18NanoAODv9-106X_upgrade2018_realistic_v16_L1v1-v1/NANOAODSIM"
+    //     ],
+    //     "DYJetsToLL_M-50_TuneCP5_13TeV-amcatnloFXFX-pythia8": [
+    //         "/DYJetsToLL_M-50_TuneCP5_13TeV-amcatnloFXFX-pythia8/RunIISummer20UL18NanoAODv9-106X_upgrade2018_realistic_v16_L1v1-v2/NANOAODSIM"
+    //     ],
+    //     "QCD_Pt-20_MuEnrichedPt15_TuneCP5_13TeV-pythia8" :[
+    //         "/QCD_Pt-20_MuEnrichedPt15_TuneCP5_13TeV-pythia8/RunIISummer20UL18NanoAODv9-106X_upgrade2018_realistic_v16_L1v1-v2/NANOAODSIM"
+    //     ]
+    },
+    "dataset_for_systematics": {
+    },
+    "dataset_trigger_order": [
+        "EGamma",
+        "SingleMuon"
+    ],
+    "dataset_trigger_map": {
+        "SingleMuon": [
+            "HLT_IsoMu24"
+        ],
+        "EGamma": [
+            "HLT_Ele32_WPTight_Gsf"
+        ]
+    },
+    "trigger_muon_path":"IsoMu24",
+    "trigger_ele_path":"Ele32_WPTight_Gsf",
+    // "column_output_format": "root",
+    // "columns_to_save": [
+    //     [
+	//     "Lepton",
+    //         "pt"
+	// ],
+    //     [
+	//     "Lepton",
+    //         "eta"
+	// ],
+    //     [
+	//     "Lepton",
+    //         "phi"
+	// ],
+    //     [
+	//     "Lepton",
+    //         "mass"
+	// ],
+    //     [
+	//     "Lepton",
+    //         "pdgId"
+	// ],
+    //     [
+    //         "Lepton_charge"
+    //     ],
+    //     [
+    //         "Lepton_isPrompt"
+    //     ],
+    //     [
+	//     "Photon",
+    //         "pt"
+	// ],
+    //     [
+	//     "Photon",
+    //         "eta"
+	// ],
+    //     [
+	//     "Photon",
+    //         "phi"
+	// ],
+	// [
+	//     "Jet",
+	//     "pt"
+	// ],
+	// [
+	//     "Jet",
+	//     "eta"
+	// ],
+	// [
+	//     "Jet",
+	//     "phi"
+	// ],
+	// [
+	//     "Jet",
+	//     "mass"
+	// ],
+	// [
+	//     "Jet",
+	//     "btagged"
+	// ],
+    //     [
+    //         "Jet",
+    //         "btag"
+    //     ],
+    //     [
+    //         "nbtag"
+    //     ],    
+    //     [
+    //         "n_noBjet"
+    //     ],    
+    //     [
+    //         "n_loose_btag"
+    //     ],    
+    //     [
+    //         "ncentral_jets"
+    //     ],    
+    //     [
+    //         "nforward_jets"
+    //     ],    
+	// [
+	//     "bJet",
+	//     "pt"
+	// ],
+	// [
+	//     "bJet",
+	//     "eta"
+	// ],
+	// [
+	//     "bJet",
+	//     "phi"
+	// ],
+	// [
+	//     "bJet",
+	//     "mass"
+	// ],
+	// [
+	//     "noBjet",
+	//     "pt"
+	// ],
+	// [
+	//     "noBjet",
+	//     "eta"
+	// ],
+	// [
+	//     "noBjet",
+	//     "phi"
+	// ],
+	// [
+	//     "noBjet",
+	//     "mass"
+	// ],
+	// [
+	//     "reco_W",
+	//     "pt"
+	// ],
+	// [
+	//     "reco_W",
+	//     "eta"
+	// ],
+	// [
+	//     "reco_W",
+	//     "energy"
+	// ],
+    //     [
+    //         "tophad_m"
+    //     ],
+    //     [
+    //         "tophad_pt"
+    //     ],
+    //     [
+    //         "tophad_eta"
+    //     ],
+    //     [
+    //         "tophad_phi"
+    //     ], 
+    //     [
+    //         "toplep_m"
+    //     ],
+    //     [
+    //         "toplep_pt"
+    //     ],
+    //     [
+    //         "toplep_eta"
+    //     ],
+    //     [
+    //         "toplep_phi"
+    //     ],
+    //     [
+    //         "chi2"
+    //     ],
+	// [
+	//     "MET",
+	//     "pt"
+	// ],
+	// [
+	//     "MET",
+	//     "phi"
+	// ],
+    //     [
+    //         "Neutrino1",
+    //         "pt"
+    //     ],
+    //     [
+    //         "Neutrino1",
+    //         "eta"
+    //     ],
+    //     [
+    //         "Neutrino1",
+    //         "phi"
+    //     ],
+    //     [
+    //         "mlg"
+	// ],
+    //     [
+    //         "mTW"
+	// ],
+    //     [
+    //         "deltaR_lg"
+    //     ],
+    //     [
+    //         "deltaR_lj"
+    //     ],
+    //     [
+    //         "deltaR_jg"
+    //     ],
+    //     [
+    //         "GenPhoton",
+    //         "pt"
+    //     ],
+    //     [
+    //         "GenPhoton",
+    //         "eta"
+    //     ],
+    //     [
+    //         "GenPhoton",
+    //         "phi"
+    //     ],
+    //     [
+    //         "GenTopPos",
+    //         "pt"
+    //     ],
+    //     [
+    //         "GenTopPos",
+    //         "eta"
+    //     ],
+    //     [
+    //         "GenTopPos",
+    //         "phi"
+    //     ],
+    //     [
+    //         "GenTopNeg",
+    //         "pt"
+    //     ],
+    //     [
+    //         "GenTopNeg",
+    //         "eta"
+    //     ],
+    //     [
+    //         "GenTopNeg",
+    //         "phi"
+    //     ]
+    // ],
+    "apply_met_filters": true,
+    "mc_lumifactors": "$CONFDIR/mc_lumi_factors_2018.json",
+
+    "ele_eta_min": -2.5,
+    "ele_eta_max": 2.5,
+    "good_ele_pt_min": 35.0,
+    "veto_ele_pt_min": 15.0,
+
+    "muon_eta_min": -2.4,
+    "muon_eta_max": 2.4,
+    "good_muon_pt_min": 30.0,
+    "veto_muon_pt_min": 15,
+
+    "good_jet_id": "cut:tight",
+    "good_jet_puId": "cut:loose",
+    "good_jet_lepton_distance": 0.4,
+    "good_jet_photon_distance": 0.4,
+    "good_jet_eta_min": -4.7,
+    "good_jet_eta_max": 4.7,
+    "good_jet_pt_min": 30,
+    "num_jets_atleast":1,
+
+    "btag": "deepjet:medium",
+    "loose_btag": "deepjet:loose",
+    "num_atleast_btagged": 1,
+
+    "hem_cut_if_ele": false,
+    "hem_cut_if_muon": false,
+    "hem_cut_if_pho": false,
+    "hem_cut_if_jet": false,
+    "photon_phi_removal": false,
+
+    "met_min_met": 20,
+
+    "hists": "$CONFDIR/fakerate_lepton_hist.json"
+}
+

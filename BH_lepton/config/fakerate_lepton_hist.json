@@ -1,0 +1,274 @@
+{
+    "leading_electron_pt": {
+        "bins": [
+            {
+                "name": "pt",
+                "label": "Electron $p_{\\mathrm{T}}$",
+                "n_or_arr": 100,
+                "lo": 0,
+                "hi": 200,
+                "unit": "GeV"
+            }
+        ],
+        "cats": [
+            {
+                "name": "tight",
+                "label": "is_tight"
+            }
+        ],
+        "fill": {
+            "pt": [
+                "Electron",
+                "pt"
+            ],
+            "tight": {
+                "tight": [
+                    "Electron",
+                    "is_good"
+                ],
+                "loose_not_tight": [
+                    "Electron",
+                    "is_good",
+                    {"function": "not"}
+                ]
+            }
+        }
+    },
+    "leading_muon_pt": {
+        "bins": [
+            {
+                "name": "pt",
+                "label": "Muon $p_{\\mathrm{T}}$",
+                "n_or_arr": 100,
+                "lo": 0,
+                "hi": 200,
+                "unit": "GeV"
+            }
+        ],
+        "cats": [
+            {
+                "name": "tight",
+                "label": "is_tight"
+            }
+        ],
+        "fill": {
+            "pt": [
+                "Muon",
+                "pt"
+            ],
+            "tight": {
+                "tight": [
+                    "Muon",
+                    "is_good"
+                ],
+                "loose_not_tight": [
+                    "Muon",
+                    "is_good",
+                    {"function": "not"}
+                ]
+            }
+        }
+    },
+    "number_of_loose_mu": {
+        "bins": [
+            {
+                "name": "n_loose_muon",
+                "label": "Number of loose muon",
+                "n_or_arr":[0,1,2]
+            }
+        ],
+        "fill": {
+            "n_loose_muon": [
+                "n_loose_muon"
+            ]
+        }
+    },
+    "number_of_tight_mu": {
+        "bins": [
+            {
+                "name": "n_tight_muon",
+                "label": "Number of tight muon",
+                "n_or_arr":[0,1,2]
+            }
+        ],
+        "fill": {
+            "n_tight_muon": [
+                "n_tight_muon"
+            ]
+        }
+    },
+    "number_of_fake_mu": {
+        "bins": [
+            {
+                "name": "n_fake_muon",
+                "label": "Number of fake muon",
+                "n_or_arr":[0,1,2]
+            }
+        ],
+        "fill": {
+            "n_fake_muon": [
+                "n_fake_muon"
+            ]
+        }
+    },
+    "number_of_loose_ele": {
+        "bins": [
+            {
+                "name": "n_loose_ele",
+                "label": "Number of loose ele",
+                "n_or_arr":[0,1,2]
+            }
+        ],
+        "fill": {
+            "n_loose_ele": [
+                "n_loose_ele"
+            ]
+        }
+    },
+    "number_of_tight_ele": {
+        "bins": [
+            {
+                "name": "n_tight_ele",
+                "label": "Number of tight ele",
+                "n_or_arr":[0,1,2]
+            }
+        ],
+        "fill": {
+            "n_tight_ele": [
+                "n_tight_ele"
+            ]
+        }
+    },
+    "number_of_fake_ele": {
+        "bins": [
+            {
+                "name": "n_fake_ele",
+                "label": "Number of fake ele",
+                "n_or_arr":[0,1,2]
+            }
+        ],
+        "fill": {
+            "n_fake_ele": [
+                "n_fake_ele"
+            ]
+        }
+    },
+    "tight_to_loose": {
+        "bins": [
+            {
+                "name": "pt",
+                "label": "$p_{\\mathrm{T}}$",
+                "n_or_arr": [30,35,45,60]
+            },
+            {
+                "name": "abseta",
+                "label": "$\\left|\\eta\\right|$",
+                "n_or_arr": [0,0.5,1.0,1.5,2.0,2.5]
+            }
+        ],
+        "cats": [
+            {
+                "name": "tight",
+                "label": "is_tight"
+            }
+        ],
+        "fill": {
+            "pt": [
+                "Lepton",
+                "pt"
+            ],
+            "abseta": [
+                "Lepton",
+                "eta",
+                {"function": "abs"}
+            ],
+            "tight": {
+                "tight": [
+                    "Lepton",
+                    "is_good"
+                ],
+                "loose_not_tight": [
+                    "Lepton",
+                    "is_good",
+                    {"function": "not"}
+                ]
+            }
+        }
+    },
+    "fakelepton_rate": {
+        "bins": [
+            {
+                "name": "pt",
+                "label": "$p_{\\mathrm{T}}$",
+                "n_or_arr": [30,35,45,60]
+            },
+            {
+                "name": "abseta",
+                "label": "$\\left|\\eta\\right|$",
+                "n_or_arr": [0,0.5,1.0,1.5,2.0,2.5]
+            }
+        ],
+        "cats": [
+            {
+                "name": "tight",
+                "label": "is_tight"
+            }
+        ],
+        "fill": {
+            "pt": [
+                "Lepton",
+                "pt"
+            ],
+            "abseta": [
+                "Lepton",
+                "eta",
+                {"function": "abs"}
+            ],
+            "tight": {
+                "tight": [
+                    "Lepton",
+                    "is_good"
+                ],
+                "loose_not_tight": [
+                    "Lepton",
+                    "is_fake"
+                ]
+            }
+        }
+    },
+    "mTW": {
+        "bins": [
+            {
+                "name": "mTW",
+                "label": "m_{T}^{W}",
+                "n_or_arr": 100,
+                "lo": 20,
+                "hi": 400
+            }
+        ],
+        "fill": {
+            "mTW": [
+                "mTW"
+          ]
+        }
+    },
+    "METpt": {
+        "bins": [
+            {
+                "name": "pt",
+                "label": "MET $p_{\\mathrm{T}}$",
+                "n_or_arr": 40,
+                "lo": 0,
+                "hi": 200,
+                "unit": "GeV"
+            }
+        ],
+        "fill": {
+            "pt": [
+                "MET",
+                "pt"
+            ]
+        }
+    }
+}
+

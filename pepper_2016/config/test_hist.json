@@ -1,0 +1,267 @@
+# Here you can find example histograms that work with the example processor
+# There are also more advanced examples in the hist_config.json
+{
+    // "leading_electron_pt": {
+    //     "bins": [
+    //         {
+    //             "name": "pt",
+    //             "label": "Electron $p_{\\mathrm{T}}$",
+    //             "n_or_arr": 100,
+    //             "lo": 0,
+    //             "hi": 400,
+    //             "unit": "GeV"
+    //         }
+    //     ],
+    //     "fill": {
+    //         "pt": [
+    //             "Electron",
+    //             "pt",
+    //             {"leading": 1}
+    //         ]
+    //     }
+    // },
+    // "leading_muon_pt": {
+    //     "bins": [
+    //         {
+    //             "name": "pt",
+    //             "label": "Muon $p_{\\mathrm{T}}$",
+    //             "n_or_arr": 100,
+    //             "lo": 0,
+    //             "hi": 400,
+    //             "unit": "GeV"
+    //         }
+    //     ],
+    //     "fill": {
+    //         "pt": [
+    //             "Muon",
+    //             "pt",
+    //             {"leading": 1}
+    //         ]
+    //     }
+    // },
+    // "leading_photon_pt": {
+    //     "bins": [
+    //         {
+    //             "name": "pt",
+    //             "label": "Photon $p_{\\mathrm{T}}$",
+    //             "n_or_arr": 100,
+    //             "lo": 20,
+    //             "hi": 400,
+    //             "unit": "GeV"
+    //         }
+    //     ],
+    //     "fill": {
+    //         "pt": [
+    //             "Photon",
+    //             "pt",
+    //             {"leading": 1}
+    //         ]
+    //     }
+    // },
+    // "number_of_jets": {
+    //     "bins": [
+    //         {
+    //             "name": "njets",
+    //             "label": "Number of jets",
+    //             "n_or_arr": 10,
+    //             "lo": 0,
+    //             "hi": 10
+    //         }
+    //     ],
+    //     "fill": {
+    //         "njets": [
+    //             "Jet",
+    //             {"function": "num"}
+    //         ]
+    //     }
+    // },
+    // "number_of_bjets": {
+    //     "bins": [
+    //         {
+    //             "name": "nbjets",
+    //             "label": "Number of bjets",
+    //             "n_or_arr": 10,
+    //             "lo": 0,
+    //             "hi": 10
+    //         }
+    //     ],
+    //     "fill": {
+    //         "nbjets": [
+    //             "bJet",
+    //             {"function": "num"}
+    //         ]
+    //     }
+    // },
+    // "mlg": {
+    //     "bins": [
+    //         {
+    //             "name": "mlg",
+    //             "label": "m_{l#gamma}",
+    //             "n_or_arr": 100,
+    //             "lo": 30,
+    //             "hi": 400
+    //         }
+    //     ],
+    //     "fill": {
+    //         "mlg": [
+    //             "mlg"
+    //       ]
+    //     }
+    // },
+    // "METpt": {
+    //     "bins": [
+    //         {
+    //             "name": "pt",
+    //             "label": "MET $p_{\\mathrm{T}}$",
+    //             "n_or_arr": 40,
+    //             "lo": 0,
+    //             "hi": 200,
+    //             "unit": "GeV"
+    //         }
+    //     ],
+    //     "fill": {
+    //         "pt": [
+    //             "MET",
+    //             "pt"
+    //         ]
+    //     }
+    // },
+    // "METphi": {
+    //     "bins": [
+    //         {
+    //             "name": "phi",
+    //             "label": "MET $\\phi$",
+    //             "n_or_arr": 40,
+    //             "lo": -3.14,
+    //             "hi": 3.14
+    //         }
+    //     ],
+    //     "fill": {
+    //         "phi": [
+    //             "MET",
+    //             "phi"
+    //         ]
+    //     }
+    // },
+    // "ST_final":
+    // {
+    //     "bins": [
+    //         {
+    //             "name": "ST",
+    //             "label": " ST GeV",
+    //             "n_or_arr": 400,
+    //             "lo": 0,
+    //             "hi": 20000
+
+    //         }
+    //     ],
+    //     "fill": {
+    //         "ST": ["ST"]
+    //     }
+    // //"step_requirement": "column:ST"
+    // },
+    // "ST_3D":
+    // {
+    //     "bins": [
+    //         {
+    //             "name": "ST",
+    //             "label": " ST GeV",
+    //             "n_or_arr": 400,
+    //             "lo": 0,
+    //             "hi": 20000
+
+    //         },
+    //         {
+    //             "name": "Sphericity",
+    //             "label": " sphericity",
+    //             "n_or_arr": 10,
+    //             "lo": 0,
+    //             "hi": 1
+
+    //         },
+    //         {
+    //             "name": "Multiplicity",
+    //             "label": " Multiplicity",
+    //             "n_or_arr": 15,
+    //             "lo": 0,
+    //             "hi": 15
+
+    //         }
+    //     ],
+    //     "fill": {
+    //         "ST": ["ST"],
+    //         "Sphericity": ["Sphericity"],
+    //         "Multiplicity": ["Multiplicity"]
+    //     }
+    // //"step_requirement": "column:ST"
+    // },
+    // "Multiplicity_final":
+    // {
+    //     "bins": [
+    //         {
+    //             "name": "Multiplicity",
+    //             "label": " Multiplicity",
+    //             "n_or_arr": 30,
+    //             "lo": 0,
+    //             "hi": 30
+
+    //         }
+    //     ],
+    //     "fill": {
+    //         "Multiplicity": ["Multiplicity"]
+    //     }
+    // //"step_requirement": "column:ST"
+    // },
+    // "2D_OT_N":
+    // {
+    //     "bins": [
+    //         {
+    //             "name": "OT",
+    //             "label": "HT+LepPt GeV",
+    //             "n_or_arr": 400,
+    //             "lo": 0,
+    //             "hi": 20000
+
+    //         },
+    //         {
+    //             "name": "Multiplicity",
+    //             "label": " Multiplicity",
+    //             "n_or_arr": 15,
+    //             "lo": 0,
+    //             "hi": 15
+
+    //         }
+    //     ],
+    //     "fill": {
+    //         "OT": ["OT"],
+    //         "Multiplicity": ["Multiplicity"]
+    //     }
+    // //"step_requirement": "column:ST"
+    // },
+    "2D_ST_N":
+    {
+        "bins": [
+            {
+                "name": "ST",
+                "label": " ST GeV",
+                "n_or_arr": 400,
+                "lo": 0,
+                "hi": 20000
+
+            },
+            {
+                "name": "Multiplicity",
+                "label": " Multiplicity",
+                "n_or_arr": 15,
+                "lo": 0,
+                "hi": 15
+
+            }
+        ],
+        "fill": {
+            "ST": ["ST"],
+            "Multiplicity": ["Multiplicity"]
+        }
+    //"step_requirement": "column:ST"
+    }
+}

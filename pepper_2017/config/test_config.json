@@ -1,0 +1,131 @@
+{
+
+    "year": "ul2018",
+    "datadir": "/afs/cern.ch/work/y/ylo/pepper_nanoAOD/2018",
+    "store": "/eos/cms/store",
+    "file_mode": "local+xrootd",
+    "xrootddomain" : "xrootd-cms.infn.it",
+    "rng_seed_file": "$CONFDIR/seed.txt",
+    "compute_systematics": false,
+    "top_pt_reweighting": {
+        "method": "datanlo",
+        "scale": 0.997175,
+        "a": 0.0615,
+        "b": -0.0005
+    },
+    "lumimask": "$CONFDIR/Cert_314472-325175_13TeV_Legacy2018_Collisions18_JSON.txt",
+    "luminosity": 59.8,
+    "split_pdf_uncs":true,
+//    "crosssections": "$CONFDIR/crosssections.json",
+    "pdf_types": {
+    "91400": "Hessian",
+    "325300": "Hessian",
+    "325500": "Hessian",
+    "306000": "Hessian"
+    },
+    "reapply_jec": false,
+    "smear_met": true,
+    "exp_datasets": {
+
+    },
+    "mc_datasets": {
+        "ST_t-channel_top_4f_InclusiveDecays_TuneCP5_13TeV-powheg-madspin-pythia8":[
+	    "/ST_t-channel_top_4f_InclusiveDecays_TuneCP5_13TeV-powheg-madspin-pythia8/RunIISummer20UL18NanoAODv9-106X_upgrade2018_realistic_v16_L1v1-v1/NANOAODSIM"
+        ],
+        "ST_t-channel_antitop_4f_InclusiveDecays_TuneCP5_13TeV-powheg-madspin-pythia8":[
+	    "/ST_t-channel_antitop_4f_InclusiveDecays_TuneCP5_13TeV-powheg-madspin-pythia8/RunIISummer20UL18NanoAODv9-106X_upgrade2018_realistic_v16_L1v1-v1/NANOAODSIM"
+        ],
+        "TGJets_TuneCP5_13TeV-amcatnlo-madspin-pythia8": [
+            "/TGJets_TuneCP5_13TeV-amcatnlo-madspin-pythia8/RunIISummer20UL18NanoAODv9-106X_upgrade2018_realistic_v16_L1v1-v2/NANOAODSIM"
+        ],
+        "TGJets_leptonDecays_TuneCP5_13TeV-amcatnlo-pythia8":[
+	   "/TGJets_leptonDecays_TuneCP5_13TeV-amcatnlo-pythia8/RunIISummer20UL18NanoAODv9-106X_upgrade2018_realistic_v16_L1v1-v1/NANOAODSIM"
+        ],
+        "TTGamma_SingleLept_TuneCP5_13TeV-madgraph-pythia8":[
+	    "/TTGamma_SingleLept_TuneCP5_13TeV-madgraph-pythia8/RunIISummer20UL18NanoAODv9-106X_upgrade2018_realistic_v16_L1v1-v1/NANOAODSIM"
+        ],
+        "TTGJets_TuneCP5_13TeV-amcatnloFXFX-madspin-pythia8":[
+            "/TTGJets_TuneCP5_13TeV-amcatnloFXFX-madspin-pythia8/RunIISummer20UL18NanoAODv9-106X_upgrade2018_realistic_v16_L1v1-v1/NANOAODSIM",
+	    "/TTGJets_TuneCP5_13TeV-amcatnloFXFX-madspin-pythia8/RunIISummer20UL18NanoAODv9-106X_upgrade2018_realistic_v16_L1v1_ext1-v1/NANOAODSIM"
+        ],
+	"TTToSemiLeptonic_TuneCP5_13TeV-powheg-pythia8": [
+	    "/TTToSemiLeptonic_TuneCP5_13TeV-powheg-pythia8/RunIISummer20UL18NanoAODv9-106X_upgrade2018_realistic_v16_L1v1-v1/NANOAODSIM"
+	],
+
+    },
+    "dataset_for_systematics": {
+    },
+    "dataset_trigger_order": [
+        "MuonEG",
+        "DoubleMuon",
+        "EGamma",
+        "SingleMuon"
+    ],
+    "dataset_trigger_map": {
+        "MuonEG": [
+            "HLT_Mu8_TrkIsoVVL_Ele23_CaloIdL_TrackIdL_IsoVL_DZ",
+            "HLT_Mu12_TrkIsoVVL_Ele23_CaloIdL_TrackIdL_IsoVL_DZ",
+            "HLT_Mu23_TrkIsoVVL_Ele12_CaloIdL_TrackIdL_IsoVL",
+            "HLT_Mu23_TrkIsoVVL_Ele12_CaloIdL_TrackIdL_IsoVL_DZ",
+            "HLT_Mu27_Ele37_CaloIdL_MW",
+            "HLT_Mu37_Ele27_CaloIdL_MW"
+        ],
+        "SingleMuon": [
+            "HLT_IsoMu24"
+        ],
+        "DoubleMuon": [
+            "HLT_Mu17_TrkIsoVVL_Mu8_TrkIsoVVL_DZ_Mass3p8"
+        ],
+        "EGamma": [
+            "HLT_Ele32_WPTight_Gsf",
+            "HLT_Ele23_Ele12_CaloIdL_TrackIdL_IsoVL",
+            "HLT_Ele23_Ele12_CaloIdL_TrackIdL_IsoVL_DZ"
+        ]
+    },
+    "trigger_muon_path":"IsoMu24",
+    "trigger_ele_path":"Ele32_WPTight_Gsf",
+    "data_eras": {
+        "2018A": [315252, 316995],
+        "2018B": [316998, 319312],
+        "2018C": [319313, 320393],
+        "2018D": [320394, 325273]
+    },
+
+
+    "apply_met_filters": true,
+    "mc_lumifactors": "$CONFDIR/mc_lumi_factors_2018.json"
+
+    "ele_eta_min": -2.5,
+    "ele_eta_max": 2.5,
+    "good_ele_pt_min": 20.0,
+    "veto_ele_pt_min": 10.0,
+
+    "muon_eta_min": -2.4,
+    "muon_eta_max": 2.4,
+    "good_muon_pt_min": 20.0,
+    "veto_muon_pt_min": 10,
+
+    "good_jet_id": "cut:tight",
+    "good_jet_puId": "cut:loose",
+    "good_jet_lepton_distance": 0.4,
+    "good_jet_photon_distance": 0.4,
+    "good_jet_eta_min": -2.4,
+    "good_jet_eta_max": 2.4,
+    "good_jet_pt_min": 30,
+    "jet_pt_min": [
+	    30,
+            30
+    ],
+    "num_jets_atleast":2,
+
+    "btag": "deepjet:medium",
+    "num_atleast_btagged": 1,
+
+    "hem_cut_if_ele": false,
+    "hem_cut_if_muon": false,
+    "hem_cut_if_jet": false,
+
+    "met_min_met": 20,
+
+    "hists": "$CONFDIR/test_hist.json",
+}
